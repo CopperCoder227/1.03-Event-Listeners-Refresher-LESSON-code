@@ -16,7 +16,13 @@ document.getElementById('btnClick').addEventListener('click', () => {
 /* --------------------------------------
    Demo 2: Double-click (toggle highlight)
 --------------------------------------- */
+const dblCard = document.getElementById('dblCard')
 
+dblCard.addEventListener('dblclick', () => {
+   dblCard.classList.toggle('activated') //adds and removes a class
+   const state = dblCard.classList.contains("activated") ? 'ON' : 'OFF' //i the if (if it on its not off)
+   render(`<p>Double-Click highlight is <b>${state}</b></p>`)
+})
 
 /* --------------------------------
    Demo 3: Keypress (show key/code)
